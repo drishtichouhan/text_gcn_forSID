@@ -24,7 +24,7 @@ if dataset not in datasets:
 # Set random seed
 seed = random.randint(1, 200)
 np.random.seed(seed)
-tf.random.set_seed(seed)
+tf.compat.v1.random.set_random_seed(seed)
 
 # Settings
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
